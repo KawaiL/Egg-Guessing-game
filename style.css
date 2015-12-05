@@ -1,0 +1,76 @@
+/*styles for chicken-egg guessing game */
+html {
+  background-image:url(farmHouse.jpg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  color: #c0392b;
+}
+
+h1 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+button,
+button img, {
+  border: none;
+  background-color: transparent;
+}
+
+#egg1,
+#egg2,
+#egg3,
+#egg4,
+#egg5 {
+  width: 90px;
+  height: 60px;
+}
+
+#egg1 {
+  position: absolute;
+  left: 5%;
+  top: 70%;
+}
+
+#egg2 {
+  position: absolute;
+  left: 10%;
+  top: 90%;
+}
+
+#egg3 {
+  position: absolute;
+  left: 40%;
+  top: 80%;
+}
+
+#egg4 {
+  position: absolute;
+  left: 70%;
+  top: 90%;
+}
+
+#egg5 {
+  position: absolute;
+  left: 85%;
+  top: 80%;
+}
+
+#message {
+  font-size: 35px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.reStart button{
+  font-size: 150%;
+  display: block;
+  border: 5px solid #c0392b;
+  border-radius: 20px;
+  padding: 5px;
+  position: absolute;
+  left: 40%;
+  top: 85%;
+}

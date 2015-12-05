@@ -1,0 +1,72 @@
+<!--
+  Guess which egg is going to hatch game.
+  Author: Kawai Li
+  Date: Nov. 2015
+  This game used HTML, CSS and JavaScript.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Where is the chick?</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div>
+  <h1>Guess which egg is going to hatch. Click it!</h1>
+   <p onclick="popEgg(1)">
+        <img src="egg.png" alt="egg" id="egg1"></p>
+
+   <p onclick="popEgg(2)">
+        <img src="egg.png" alt="egg" id="egg2"></p>
+
+   <p onclick="popEgg(3)">
+        <img src="egg.png" alt="egg" id="egg3"></p>
+
+    <p onclick="popEgg(4)">
+        <img src="egg.png" alt="egg" id="egg4"></p>
+
+    <p onclick="popEgg(5)">
+        <img src="egg.png" alt="egg" id="egg5"></p>
+
+    <p id="message"></p>
+
+    <div class="reStart">
+      <button type="button" onclick="reStartGame()">Restart Game</button>
+    </div>
+</div>
+
+<script>
+function popEgg(whichEgg) {
+  var readyEgg = getRandomIntInclusive(1,5) ;//randomly select egg 1 to 5
+  if (readyEgg === whichEgg){
+      document.getElementById("message").innerHTML = "Yeah! You picked the correct egg.";
+      hatchEgg(readyEgg);
+    }else {
+      document.getElementById("message").innerHTML = "Opps..  Wrong egg";
+      hatchEgg(readyEgg);
+    }
+ }
+
+function getRandomIntInclusive(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function hatchEgg (theEgg) {
+    var eggHandler = "egg" + theEgg;
+  //  console.log (eggHandler);
+    document.getElementById(eggHandler).src = "egg-ck.png";
+}
+
+function reStartGame () {
+  document.getElementById("message").innerHTML = "";
+  document.getElementById("egg1").src = "egg.png";
+  document.getElementById("egg2").src = "egg.png";
+  document.getElementById("egg3").src = "egg.png";
+  document.getElementById("egg4").src = "egg.png";
+  document.getElementById("egg5").src = "egg.png";
+}
+</script>
+
+</body>
+</html>
